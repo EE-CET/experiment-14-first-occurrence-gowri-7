@@ -1,8 +1,22 @@
+
+import java.util.Scanner;
+
 public class FirstOccurrence {
-    
-        // TODO: Read N and K
-        // TODO: Read array elements
-        // TODO: Find the position (1-based index) of the first occurrence of K
-        // TODO: Print the position or -1 if not found
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        int position = -1;
+
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            if (num == k && position == -1) {
+                position = i + 1;
+            }
+        }
+
+        System.out.println(position);
+    }
 }
